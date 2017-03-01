@@ -15,7 +15,6 @@ namespace Roguelike
         public Form1()
         {
             InitializeComponent();
-            //testing
         }
     }
 }
