@@ -11,6 +11,7 @@ namespace Roguelike
         private string name; //just the name, self explanatory
         private int strength; //base strength attribute before buffs and other mods
         private int hp; //base healthpoints
+        private int xp;
 
         public int getStrength()
         {
@@ -27,11 +28,17 @@ namespace Roguelike
             return name;
         }
 
+        public int getXP()
+        {
+            return xp;
+        }
+
         public Player(string n)
         {
             name = n;
             strength = 2; //base number to start with can change later
             hp = 10;
+            xp = 0;
         }
 
         public int attack()
