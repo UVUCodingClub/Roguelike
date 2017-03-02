@@ -49,6 +49,8 @@ namespace Roguelike
             {
                 MessageBox.Show("You defeated the monster!"); //show a message box
                 txtEnemyHealth.Text = "0";
+                e1 = new Enemy();
+                char1.giveXP();
             }
             else //monster didnt die :(
             {
@@ -99,11 +101,35 @@ namespace Roguelike
             StreamWriter saveFile = new StreamWriter("save_game.txt");
 
             //Will save current rendition of the character
-            saveFile.WriteLine($"Name: {char1.getName()}");
-            saveFile.WriteLine($"XP: {char1.getXP()}");
-            saveFile.WriteLine($"HP: {char1.getHP()}");
-            saveFile.WriteLine($"Strength: {char1.getStrength()}");
+            saveFile.WriteLine(char1.getName());
+            saveFile.WriteLine(char1.getXP());
+            saveFile.WriteLine(char1.getHP());
+            saveFile.WriteLine(char1.getStrength());
             saveFile.Close();
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamReader loadFile = new StreamReader("save_game.txt");
+
+            char1.setName(loadFile.ReadLine()); //read and set name
+
+            int loadXP;
+            int.TryParse(loadFile.ReadLine(), out loadXP);
+            char1.setXP(loadXP);
+
+            int loadHP;
+            int.TryParse(loadFile.ReadLine(), out loadHP);
+            char1.setHP(loadHP);
+
+            int loadStrength;
+            int.TryParse(loadFile.ReadLine(), out loadStrength);
+            char1.setStrength(loadStrength);
+
+            loadFile.Close();
+
+            txtPlayerName.Text = char1.getName();
+            txtPlayerHealth.Text = char1.getHP().ToString();
         }
     }
 }

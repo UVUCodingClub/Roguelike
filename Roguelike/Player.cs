@@ -18,9 +18,19 @@ namespace Roguelike
             return strength;
         }
 
+        public void setStrength(int s)
+        {
+            strength = s;
+        }
+
         public int getHP()
         {
             return hp;
+        }
+
+        public void setHP(int HP)
+        {
+            hp = HP;
         }
 
         public string getName()
@@ -28,9 +38,24 @@ namespace Roguelike
             return name;
         }
 
+        public void setName(string n)
+        {
+            name = n;
+        }
+
         public int getXP()
         {
             return xp;
+        }
+
+        public void setXP(int XP)
+        {
+            xp = XP;
+        }
+
+        public void giveXP()
+        {
+            xp++;
         }
 
         public Player(string n)

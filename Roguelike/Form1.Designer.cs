@@ -54,6 +54,7 @@
             // 
             this.txtPlayerName.Location = new System.Drawing.Point(80, 195);
             this.txtPlayerName.Name = "txtPlayerName";
+            this.txtPlayerName.ReadOnly = true;
             this.txtPlayerName.Size = new System.Drawing.Size(100, 20);
             this.txtPlayerName.TabIndex = 0;
             // 
@@ -61,6 +62,7 @@
             // 
             this.txtPlayerHealth.Location = new System.Drawing.Point(80, 231);
             this.txtPlayerHealth.Name = "txtPlayerHealth";
+            this.txtPlayerHealth.ReadOnly = true;
             this.txtPlayerHealth.Size = new System.Drawing.Size(100, 20);
             this.txtPlayerHealth.TabIndex = 1;
             // 
@@ -68,6 +70,7 @@
             // 
             this.txtEnemyName.Location = new System.Drawing.Point(225, 195);
             this.txtEnemyName.Name = "txtEnemyName";
+            this.txtEnemyName.ReadOnly = true;
             this.txtEnemyName.Size = new System.Drawing.Size(100, 20);
             this.txtEnemyName.TabIndex = 2;
             // 
@@ -75,6 +78,7 @@
             // 
             this.txtEnemyHealth.Location = new System.Drawing.Point(225, 231);
             this.txtEnemyHealth.Name = "txtEnemyHealth";
+            this.txtEnemyHealth.ReadOnly = true;
             this.txtEnemyHealth.Size = new System.Drawing.Size(100, 20);
             this.txtEnemyHealth.TabIndex = 3;
             // 
@@ -157,6 +161,7 @@
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
