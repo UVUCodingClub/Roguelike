@@ -90,6 +90,9 @@ namespace Roguelike
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //TODO: FIX SO IT ACTUALLY SAVES THE FILE
+            //currently saves in app folder
+
+
             //generates a path to the my documents folder and creates a streamwriter object to write a txt file there
             //string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             //StreamWriter saveFile = new StreamWriter(path + "save_game.txt");
