@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Roguelike
 {
-    internal class Player
+    class Player
     {
         private string name; //just the name, self explanatory
         private int strength; //base strength attribute before buffs and other mods

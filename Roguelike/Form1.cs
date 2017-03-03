@@ -15,7 +15,7 @@ namespace Roguelike
     public partial class FrmMain : Form
     {
         //have to put objects out here to make them global to all event handlers
-        public static Player char1 = new Player("Benny");
+        Player char1 = new Player("Benny");
         Enemy e1 = new Enemy();
         public FrmMain()
         {
