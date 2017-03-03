@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace Roguelike
 {
     public partial class FrmMain : Form
     {
         //have to put objects out here to make them global to all event handlers
-        Player char1 = new Player("Benny");
+        public static Player char1 = new Player("Benny");
         Enemy e1 = new Enemy();
         public FrmMain()
         {
@@ -51,6 +52,7 @@ namespace Roguelike
                 txtEnemyHealth.Text = "0";
                 e1 = new Enemy();
                 char1.giveXP();
+                char1.giveMoney(2); //take out magic number later
             }
             else //monster didnt die :(
             {
@@ -106,6 +108,8 @@ namespace Roguelike
             saveFile.WriteLine(char1.getHP());
             saveFile.WriteLine(char1.getStrength());
             saveFile.Close();
+
+            MessageBox.Show("Save successful");
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,6 +134,13 @@ namespace Roguelike
 
             txtPlayerName.Text = char1.getName();
             txtPlayerHealth.Text = char1.getHP().ToString();
+        }
+
+        private void btnOpenShop_Click(object sender, EventArgs e)
+        {
+            frmShop shop = new frmShop();
+            
+            shop.Show();
         }
     }
 }

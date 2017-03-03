@@ -46,6 +46,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTheMakersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnOpenShop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
@@ -152,21 +154,21 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -185,11 +187,30 @@
             this.aboutTheMakersToolStripMenuItem.Text = "About the Makers";
             this.aboutTheMakersToolStripMenuItem.Click += new System.EventHandler(this.aboutTheMakersToolStripMenuItem_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // btnOpenShop
+            // 
+            this.btnOpenShop.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnOpenShop.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnOpenShop.Location = new System.Drawing.Point(328, 349);
+            this.btnOpenShop.Name = "btnOpenShop";
+            this.btnOpenShop.Size = new System.Drawing.Size(75, 23);
+            this.btnOpenShop.TabIndex = 10;
+            this.btnOpenShop.Text = "Open Shop";
+            this.btnOpenShop.UseVisualStyleBackColor = false;
+            this.btnOpenShop.Click += new System.EventHandler(this.btnOpenShop_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 384);
+            this.Controls.Add(this.btnOpenShop);
             this.Controls.Add(this.lblEnemyHealth);
             this.Controls.Add(this.lblEnemyName);
             this.Controls.Add(this.lblPlayerHealth);
@@ -230,6 +251,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutTheMakersToolStripMenuItem;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnOpenShop;
     }
 }
 
